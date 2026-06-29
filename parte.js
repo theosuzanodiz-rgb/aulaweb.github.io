@@ -49,7 +49,6 @@ document.querySelectorAll('.campo input, .campo select').forEach(elemento => {
 btnSalvar.addEventListener('click', function () {
   // Captura os valores dos campos
   const nomeDisciplina = document.getElementById('nomeDisciplina').value.trim();
-  const codigoDisciplina = document.getElementById('codigoDisciplina').value.trim();
   const nomeProfessor = document.getElementById('nomeProfessor').value.trim();
   const cargaHoraria = document.getElementById('cargaHoraria').value.trim();
   const emailProfessor = document.getElementById('emailProfessor').value.trim();
@@ -72,7 +71,6 @@ btnSalvar.addEventListener('click', function () {
 
   novaLinha.innerHTML = `
     <td>${nomeDisciplina}</td>
-    <td>${codigoDisciplina}</td>
     <td>${nomeProfessor}</td>
     <td>${cargaHoraria}h</td>
     <td>${emailProfessor}</td>
