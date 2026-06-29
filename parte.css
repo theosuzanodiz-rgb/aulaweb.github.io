@@ -1,0 +1,245 @@
+/* ===== BASE ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  color: #2d3748;
+  min-height: 100vh;
+}
+
+/* ===== Titulo ===== */
+header {
+  background-color: #1a3a5c;
+  color: #ffffff;
+  padding: 24px 40px;
+  border-bottom: 4px solid #2e86de;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+header .subtitulo {
+  font-size: 0.95rem;
+  color: #a8c7e8;
+  margin-top: 4px;
+}
+
+/* ===== corpo principal ===== */
+main {
+  max-width: 960px;
+  margin: 36px auto;
+  padding: 0 20px;
+}
+
+/* ===== form section ===== */
+.formato-secao {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+}
+
+/* ===== FORM GRID ===== */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 28px;
+}
+
+/* ===== CAMPOS ===== */
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1a3a5c;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.campo.erro label {
+  color: #e53e3e;
+}
+
+.campo.erro label::after {
+  content: ' •';
+  color: #e53e3e;
+  margin-left: 4px;
+}
+
+.campo.erro input,
+.campo.erro select {
+  border-color: #e53e3e;
+  box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.12);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+select {
+  padding: 10px 14px;
+  border: 1.5px solid #cbd5e0;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #2d3748;
+  background-color: #f7fafc;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #2e86de;
+  box-shadow: 0 0 0 3px rgba(46, 134, 222, 0.15);
+  background-color: #ffffff;
+}
+
+input::placeholder {
+  color: #a0aec0;
+  font-size: 0.88rem;
+}
+
+/* ===== BOTÕES ===== */
+.botoes {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+button {
+  padding: 11px 32px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+#btnSalvar {
+  background-color: #2e86de;
+  color: #ffffff;
+}
+
+#btnSalvar:hover {
+  background-color: #1a6fc4;
+  transform: translateY(-1px);
+}
+
+#btnLimpar {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+#btnLimpar:hover {
+  background-color: #cbd5e0;
+  transform: translateY(-1px);
+}
+
+/* ===== DIV DE MENSAGEM ===== */
+#mensagem {
+  margin-top: 16px;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+  color: #1a3a5c;
+  background-color: transparent;
+}
+
+#mensagem.ativa {
+  background-color: #ebf4ff;
+  border-left: 4px solid #2e86de;
+  padding: 10px 14px;
+}
+
+/* ===== SEÇÃO DA TABELA ===== */
+.tabela-section {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.tabela-section h2 {
+  font-size: 1.1rem;
+  color: #1a3a5c;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* ===== TABELA ===== */
+.tabela-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+thead {
+  background-color: #1a3a5c;
+  color: #ffffff;
+}
+
+thead th {
+  padding: 12px 14px;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+tbody tr {
+  border-bottom: 1px solid #e2e8f0;
+  transition: background-color 0.15s;
+}
+
+tbody tr:hover {
+  background-color: #ebf4ff;
+}
+
+tbody td {
+  padding: 11px 14px;
+  color: #4a5568;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    padding: 18px 20px;
+  }
+
+  .formato-secao,
+  .tabela-section {
+    padding: 20px;
+  }
+}
