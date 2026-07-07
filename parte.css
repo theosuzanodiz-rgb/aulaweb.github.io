@@ -1,4 +1,4 @@
-/* ===== BASE ===== */
+/* Base*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +12,7 @@ body {
   min-height: 100vh;
 }
 
-/* ===== Titulo ===== */
+/* Titulo*/
 header {
   background-color: #1a3a5c;
   color: #ffffff;
@@ -32,14 +32,14 @@ header .subtitulo {
   margin-top: 4px;
 }
 
-/* ===== corpo principal ===== */
+/*corpo principal */
 main {
   max-width: 960px;
   margin: 36px auto;
   padding: 0 20px;
 }
 
-/* ===== form section ===== */
+/* form section */
 .formato-secao {
   background-color: #ffffff;
   border-radius: 10px;
@@ -48,14 +48,14 @@ main {
   margin-bottom: 40px;
 }
 
-/* ===== FORM GRID ===== */
+/* Form Grind */
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px 28px;
 }
 
-/* ===== CAMPOS ===== */
+/* Campos */
 .campo {
   display: flex;
   flex-direction: column;
@@ -113,7 +113,7 @@ input::placeholder {
   font-size: 0.88rem;
 }
 
-/* ===== BOTÕES ===== */
+/*Botões*/
 .botoes {
   display: flex;
   gap: 14px;
@@ -150,7 +150,7 @@ button {
   transform: translateY(-1px);
 }
 
-/* ===== DIV DE MENSAGEM ===== */
+/* Div de Mensagem */
 #mensagem {
   margin-top: 16px;
   min-height: 38px;
@@ -171,7 +171,7 @@ button {
   padding: 10px 14px;
 }
 
-/* ===== SEÇÃO DA TABELA ===== */
+/* Seção de mensagem*/
 .tabela-section {
   background-color: #ffffff;
   border-radius: 10px;
@@ -190,7 +190,7 @@ button {
   border-bottom: 2px solid #e2e8f0;
 }
 
-/* ===== TABELA ===== */
+/* Tabela */
 .tabela-wrapper {
   overflow-x: auto;
 }
@@ -228,7 +228,7 @@ tbody td {
   color: #4a5568;
 }
 
-/* ===== RESPONSIVO ===== */
+/* Responsivo */
 @media (max-width: 640px) {
   .form-grid {
     grid-template-columns: 1fr;
