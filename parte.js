@@ -58,7 +58,7 @@ btnSalvar.addEventListener('click', function () {
 
   // Valida se todos os campos obrigatórios estão preenchidos
   if (!validarCampos()) {
-    mostrarMensagem('⚠️ Preencha todos os campos antes de salvar.');
+    mostrarMensagem(' Preencha todos os campos antes de salvar.');
     return;
   }
 
