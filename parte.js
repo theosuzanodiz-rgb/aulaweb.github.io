@@ -1,29 +1,29 @@
-// ===== REFERÊNCIAS AOS ELEMENTOS =====
+// Referencias a cada elemento 
 const form = document.getElementById('formDisciplina');
 const btnSalvar = document.getElementById('btnSalvar');
 const btnLimpar = document.getElementById('btnLimpar');
 const mensagem = document.getElementById('mensagem');
 const corpoTabela = document.getElementById('corpoTabela');
 
-// ===== FUNÇÃO: Exibir mensagem na div =====
+// Função: exibir mensagem na div
 function mostrarMensagem(texto) {
   mensagem.textContent = texto;
   mensagem.classList.add('ativa');
 }
 
-// ===== FUNÇÃO: Limpar mensagem da div =====
+// Função:Limpar mensagem da div 
 function limparMensagem() {
   mensagem.textContent = '';
   mensagem.classList.remove('ativa');
 }
 
-// ===== FUNÇÃO: Limpar o formulário =====
+// Função: Limpar o formulário 
 function limparFormulario() {
   form.reset();
   document.querySelectorAll('.campo.erro').forEach(campo => campo.classList.remove('erro'));
 }
 
-// ===== FUNÇÃO: Atualizar estado visual de um campo =====
+//  Função: Atualizar estado visual de um campo 
 function atualizarEstadoCampo(campo) {
   const input = campo.querySelector('input, select');
   if (!input) return;
@@ -32,20 +32,20 @@ function atualizarEstadoCampo(campo) {
   campo.classList.toggle('erro', !valor);
 }
 
-// ===== FUNÇÃO: Validar todos os campos =====
+// Função: Validar todos os campos 
 function validarCampos() {
   document.querySelectorAll('.campo').forEach(campo => atualizarEstadoCampo(campo));
   return document.querySelectorAll('.campo.erro').length === 0;
 }
 
-// ===== EVENTOS PARA MARCAR O CAMPO QUANDO ESTIVER VAZIO =====
+// Evento para destacar campos não preenchidos
 document.querySelectorAll('.campo input, .campo select').forEach(elemento => {
   elemento.addEventListener('input', () => atualizarEstadoCampo(elemento.closest('.campo')));
   elemento.addEventListener('change', () => atualizarEstadoCampo(elemento.closest('.campo')));
   elemento.addEventListener('blur', () => atualizarEstadoCampo(elemento.closest('.campo')));
 });
 
-// ===== BOTÃO SALVAR =====
+//  Botão Salvar
 btnSalvar.addEventListener('click', function () {
   // Captura os valores dos campos
   const nomeDisciplina = document.getElementById('nomeDisciplina').value.trim();
@@ -85,7 +85,7 @@ btnSalvar.addEventListener('click', function () {
   limparFormulario();
 });
 
-// ===== BOTÃO LIMPAR =====
+// Botão Limpar
 btnLimpar.addEventListener('click', function () {
   limparFormulario();
 });
